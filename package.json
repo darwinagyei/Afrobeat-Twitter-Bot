@@ -5,8 +5,7 @@
     "got": "^12.5.3",
     "node-fetch": "^3.3.0",
     "oauth-1.0a": "^2.2.6",
-    "query-string": "^7.1.1",
-    "uuid": "^9.0.0"
+    "query-string": "^7.1.1"
   },
   "type": "module"
 }
