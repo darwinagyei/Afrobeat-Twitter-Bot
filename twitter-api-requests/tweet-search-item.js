@@ -6,7 +6,7 @@ import { searchQuery } from '../spotify-api-requests/search-query.js';
 
 
 const consumer_key = process.env.CONSUMER_KEY;
-const consumer_secret= process.env.CONSUMER_SECRET;
+const consumer_secret = process.env.CONSUMER_SECRET;
 const oauth_token = process.env.OAUTH_TOKEN;
 const oauth_token_secret = process.env.OAUTH_TOKEN_SECRET;
 
@@ -26,15 +26,16 @@ const oauth = OAuth({
 });
 
 
-
 const token = {
     key: oauth_token,
     secret: oauth_token_secret
 };
 
-async function tweetSearchItem() {
+export async function tweetSearchItem() {
 
     const createTweetEndpointURL = 'https://api.twitter.com/2/tweets';
+
+    //Spotify search query accepts 3 parameters: genre, type, & object property name  
     const searchItem = await searchQuery('afrobeat', 'playlist', "playlists");
     const data = { text: `${searchItem}` };
 
@@ -60,18 +61,16 @@ async function tweetSearchItem() {
 
         });
 
-        const tweet_res = await res.json();
-        console.log(tweet_res);
-        return tweet_res;
+        const tweet_response = await res.json();
+        return tweet_response;
 
     } catch (error) {
-        console.log('Error:', error);
+        console.error('Error:', error);
     }
 
 
 }
 
 
-tweetSearchItem();
 
 

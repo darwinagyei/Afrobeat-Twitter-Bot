@@ -26,9 +26,8 @@ export async function searchQuery(genre, type, object) {
         console.log(external_urls);
         return external_urls;
     } catch (error) {
-        console.log('Error:', error);
+        console.error('Error:', error);
     }
-
 
 
 

@@ -4,12 +4,11 @@ import querystring from 'query-string';
 
 
 
-//The execution of async function is paused and waits until the await promise operation resolves
  export async function newAccessToken() {
 
   const spotifyTokenBaseUrl = 'https://accounts.spotify.com/api/token';
   const spotifyClientId = process.env.SPOTIFY_CLIENT_ID;
-  const spotifyClientSecret = process.env.SPOTIFY_CLIENT_SECRET; 
+  const spotifyClientSecret = process.env.SPOTIFY_CLIENT_SECRET;  
   const body = { grant_type: 'client_credentials' };
 
 
