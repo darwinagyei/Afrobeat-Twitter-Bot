@@ -7,8 +7,8 @@ import { searchQuery } from '../spotify-api-requests/search-query.js';
 
 const consumer_key = process.env.CONSUMER_KEY;
 const consumer_secret = process.env.CONSUMER_SECRET;
-const oauth_token = process.env.OAUTH_TOKEN;
-const oauth_token_secret = process.env.OAUTH_TOKEN_SECRET;
+const access_token = process.env.ACCESS_TOKEN;
+const access_token_secret = process.env.ACCESS_TOKEN_SECRET;
 
 
 const oauth = OAuth({
@@ -27,8 +27,8 @@ const oauth = OAuth({
 
 
 const token = {
-    key: oauth_token,
-    secret: oauth_token_secret
+    key: access_token,
+    secret: access_token_secret
 };
 
 export async function tweetSearchItem() {
