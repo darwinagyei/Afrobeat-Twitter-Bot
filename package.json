@@ -1,4 +1,13 @@
 {
+
+  "name": "afrobeats-twitter-bot",
+  "description": "An X bot that posts and discovers Afrobeats artists, albums, songs, playlists, and concert tickets",
+  "main": "index.js",
+  "author": {
+    "name": "Darwin Agyei",
+    "email": "agyeidarwin@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.5.1",
     "crypto-js": "^4.1.1",
@@ -7,3 +16,5 @@
   },
   "type": "module"
 }
+
+
